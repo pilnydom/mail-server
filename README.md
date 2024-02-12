@@ -6,16 +6,26 @@ Poštovní server je jednou z individuálních domácích úloh zadaných k vypr
 
 Úkolem je realizovat třídu `CMailServer`, která bude simulovat činnost jednoduchého poštovního serveru.
 
-## Zadání a požadavky
+## Obsah
+
+- [Zadání](#zadání)
+- [Detailní specifikace](#detailní-specifikace)
+    - [Třída `CMail`](#třída-cmail)
+    - [Třída `CMailServer`](#třída-cmailserver)
+    - [Třída `CMailIterator`](#třída-cmailiterator)
+- [Instalace](#instalace)
+- [Příklad použití](#příklad-použití)
+
+## Zadání
 
 Předpokládáme, že server zprostředkovává zasílání e-mailu uvnitř nějaké organizace. Každý e-mail je reprezentován instancí třídy `CMail`, obsahuje adresu odesílatele, adresu příjemce a tělo zprávy (vše jsou to řetězce). Mail server umí zprávu odeslat a umí zjišťovat obsah odeslané a přijaté pošty (outbox a inbox) pro jednotlivé e-mailové adresy. Seznam odeslané a přijaté pošty je poskytnut pro jednotlivé e-mailové adresy v podobě iterátoru, instance iterátoru nabízí metody, kterými se lze pohybovat v seznamu mailů a lze se dostat k obsahu jednotlivých mailů. Vlastní třída `CMailServer` musí správně zvládat kopírování, její kopie slouží pro archivační a auditní účely.
 
 > [!IMPORTANT]
 > Úloha je směřována k procvičení pochopení mělké a hluboké kopie objektu. Z tohoto důvodu jsou v úloze potlačené části standardní C++ knihovny, zejména STL a datový typ C++ `std::string`. K dispozici je pouze rozhraní knihovny C řetězců (`cstring`). Pro implementaci může být vhodné si vytvořit vlastní jednoduchou náhradu `std::string`.
 
-### Požadované rozhraní
+## Detailní specifikace
 
-#### Třída `CMail`
+### Třída `CMail`
 
 Požadovaná třída `CMail` má následující rozhraní:
 
@@ -25,7 +35,7 @@ Požadovaná třída `CMail` má následující rozhraní:
 | `operator==` | Porovná obsah dvou instancí `CMail`, metoda vrací `true`, pokud jsou instance identické (shodují se všechny složky `from`, `to` i obsah e-mailu). |
 | `operator<<` | Zobrazí informace o mailu do zadaného streamu. Formát je zřejmý z ukázky. |
 
-#### Třída `CMailServer`
+### Třída `CMailServer`
 
 Požadovaná třída `CMailServer` má následující rozhraní:
 
@@ -41,7 +51,7 @@ Požadovaná třída `CMailServer` má následující rozhraní:
 > [!IMPORTANT]
 > Emailové adresy v úloze mohou být libovolné řetězce, při jejich porovnávání rozlišujeme malá a velká písmena (case sensitive) - v tomto se úloha liší od reálného světa, kde e-mailové adresy mají předepsaný formální tvar a kde se malá a velká písmena zpravidla nerozlišují.
 
-#### Třída `CMailIterator`
+### Třída `CMailIterator`
 
 Požadovaná třída `CMailIterator` má následující rozhraní:
 
