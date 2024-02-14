@@ -1,5 +1,7 @@
 # Poštovní server
 
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](/README.md)
+
 ## O projektu
 
 Poštovní server je jednou z individuálních domácích úloh zadaných k vypracování v rámci předmětu, který je zaměřen na procvičení programování a algoritmizace v jazyku C++.
