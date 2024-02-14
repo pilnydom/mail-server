@@ -1,5 +1,7 @@
 # Mail Server
 
+[![cs](https://img.shields.io/badge/lang-cs-blue.svg)](/README.cs.md)
+
 ## About
 
 The Mail Server is one of the individual homework assignments assigned for the course, which is aimed at practicing programming and algorithmization in the C++ language.
